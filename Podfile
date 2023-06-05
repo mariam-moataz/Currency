@@ -7,7 +7,8 @@ target 'Currency' do
 
   pod 'RxSwift', '~> 6.5'
   pod 'RxCocoa', '~> 6.5'
-	
+  pod 'iOSDropDown', '~> 0.4'
+
   # Pods for Currency
 
   target 'CurrencyTests' do

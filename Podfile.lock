@@ -1,4 +1,5 @@
 PODS:
+  - iOSDropDown (0.4.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -7,20 +8,23 @@ PODS:
   - RxSwift (6.5.0)
 
 DEPENDENCIES:
+  - iOSDropDown (~> 0.4)
   - RxCocoa (~> 6.5)
   - RxSwift (~> 6.5)
 
 SPEC REPOS:
   trunk:
+    - iOSDropDown
     - RxCocoa
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: a22b766e9b713e28c5226e83721a65cd53c64514
+PODFILE CHECKSUM: 251459be6679460e4330fa2467e5852c947562da
 
 COCOAPODS: 1.11.3
