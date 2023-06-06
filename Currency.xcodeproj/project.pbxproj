@@ -12,6 +12,7 @@
 		C9152A162A2E943800711ADB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152A142A2E943800711ADB /* TableViewCell.swift */; };
 		C9152A172A2E943800711ADB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9152A152A2E943800711ADB /* TableViewCell.xib */; };
 		C9152A192A2E949200711ADB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152A182A2E949200711ADB /* DetailsViewController.swift */; };
+		C9372A432A2EB23D00DCBF5A /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9372A422A2EB23D00DCBF5A /* CurrencyResponse.swift */; };
 		C9B0348A2A2E5993008DCE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B034892A2E5993008DCE34 /* AppDelegate.swift */; };
 		C9B0348C2A2E5993008DCE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0348B2A2E5993008DCE34 /* SceneDelegate.swift */; };
 		C9B034912A2E5993008DCE34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B0348F2A2E5993008DCE34 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		C9152A142A2E943800711ADB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C9152A152A2E943800711ADB /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		C9152A182A2E949200711ADB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C9372A422A2EB23D00DCBF5A /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
 		C9B034862A2E5993008DCE34 /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B034892A2E5993008DCE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B0348B2A2E5993008DCE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		C9CB2A172A2E7E17009E0DFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C9372A422A2EB23D00DCBF5A /* CurrencyResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				C9B034942A2E5993008DCE34 /* Currency.xcdatamodeld in Sources */,
 				C9CB2A0F2A2E7BE4009E0DFB /* ConvertCurrencyViewController.swift in Sources */,
 				C9B0348A2A2E5993008DCE34 /* AppDelegate.swift in Sources */,
+				C9372A432A2EB23D00DCBF5A /* CurrencyResponse.swift in Sources */,
 				C9CB2A192A2E7E65009E0DFB /* UIExtension.swift in Sources */,
 				C9152A192A2E949200711ADB /* DetailsViewController.swift in Sources */,
 				C9B0348C2A2E5993008DCE34 /* SceneDelegate.swift in Sources */,
