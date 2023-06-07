@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CurrencyResponse{
+struct CurrencyResponse : Decodable{
     var success : Bool?
     var timestamp : Int?
     var base : String?
