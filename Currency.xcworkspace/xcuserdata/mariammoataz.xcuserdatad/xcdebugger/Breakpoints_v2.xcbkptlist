@@ -3,4 +3,54 @@
    uuid = "48571756-7A35-41D8-AE18-345CF113AE9D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC16387B-A291-4EB4-BC01-946DA167F591"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency/View/Controllers/ConvertCurrencyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC16387B-A291-4EB4-BC01-946DA167F591 - eab443b61957d9b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "CC16387B-A291-4EB4-BC01-946DA167F591 - 650b5e9bc46c44e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Currency.CurrencyResponse&gt;) -&gt; () in Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "143">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

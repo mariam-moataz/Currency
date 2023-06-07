@@ -16,6 +16,7 @@
 		C93E24F82A3001FC002EC0B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24F72A3001FC002EC0B3 /* NetworkService.swift */; };
 		C93E24FA2A30021D002EC0B3 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24F92A30021D002EC0B3 /* NetworkServiceProtocol.swift */; };
 		C93E24FC2A300278002EC0B3 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24FB2A300278002EC0B3 /* EndPoints.swift */; };
+		C93E24FE2A300ED5002EC0B3 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24FD2A300ED5002EC0B3 /* CurrencyViewModel.swift */; };
 		C9B0348A2A2E5993008DCE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B034892A2E5993008DCE34 /* AppDelegate.swift */; };
 		C9B0348C2A2E5993008DCE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0348B2A2E5993008DCE34 /* SceneDelegate.swift */; };
 		C9B034912A2E5993008DCE34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B0348F2A2E5993008DCE34 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		C93E24F72A3001FC002EC0B3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C93E24F92A30021D002EC0B3 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		C93E24FB2A300278002EC0B3 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		C93E24FD2A300ED5002EC0B3 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
 		C9B034862A2E5993008DCE34 /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B034892A2E5993008DCE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B0348B2A2E5993008DCE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		C9CB2A162A2E7DFF009E0DFB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C93E24FD2A300ED5002EC0B3 /* CurrencyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B034942A2E5993008DCE34 /* Currency.xcdatamodeld in Sources */,
+				C93E24FE2A300ED5002EC0B3 /* CurrencyViewModel.swift in Sources */,
 				C9CB2A0F2A2E7BE4009E0DFB /* ConvertCurrencyViewController.swift in Sources */,
 				C9B0348A2A2E5993008DCE34 /* AppDelegate.swift in Sources */,
 				C9372A432A2EB23D00DCBF5A /* CurrencyResponse.swift in Sources */,
