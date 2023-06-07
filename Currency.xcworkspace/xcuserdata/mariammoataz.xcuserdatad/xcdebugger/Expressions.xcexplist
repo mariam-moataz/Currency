@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currencyResponse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CurrencyViewModel.init():CurrencyViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currencies">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NetworkService.fetchData(url:):NetworkService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fromDropList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

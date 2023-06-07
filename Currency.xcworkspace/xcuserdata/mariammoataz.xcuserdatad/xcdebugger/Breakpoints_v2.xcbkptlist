@@ -7,35 +7,36 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC16387B-A291-4EB4-BC01-946DA167F591"
+            uuid = "9EBB47D9-F011-42AC-9179-F01B28DF77B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency/View/Controllers/ConvertCurrencyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currency/View/Controllers/ConvertCurrencyViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CC16387B-A291-4EB4-BC01-946DA167F591 - eab443b61957d9b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Currency"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "91">
-               </Location>
-               <Location
-                  uuid = "CC16387B-A291-4EB4-BC01-946DA167F591 - 650b5e9bc46c44e1"
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - 650b5e9bc46c4484"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,11 +46,132 @@
                   urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "143">
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1522">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - eab443b61957da31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "546">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - 650b5e9bc46c4765"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Currency.CurrencyResponse&gt;) -&gt; () in Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1522">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - eab443b61957da31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "495">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - 650b5e9bc46c4765"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Currency.CurrencyResponse&gt;) -&gt; () in Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "2152">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - 650b5e9bc46c4484"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Currency.CurrencyResponse&gt;) -&gt; () in Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "2159">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - eab443b61957da7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "827">
+               </Location>
+               <Location
+                  uuid = "D86A7A51-27F6-4CA7-BE41-A3141881D2E1 - 650b5e9bc46c472b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;Currency.CurrencyResponse&gt;) -&gt; () in Currency.ConvertCurrencyViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/View/Controllers/ConvertCurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1936">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07350B74-8885-49AC-B5A0-770A175D6CFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency/View/Controllers/ConvertCurrencyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
