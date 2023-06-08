@@ -21,6 +21,7 @@ class ConvertCurrencyViewController: UIViewController {
     var viewModel : CurrencyViewModel!
     var sortedCurrencies : [String] = []
     var rates : [String : Double] = [:]
+    var theCurrencies = (0.0, 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,16 +50,27 @@ class ConvertCurrencyViewController: UIViewController {
             
             self?.fromDropList.text = self?.sortedCurrencies[0]
             self?.toDropList.text = self?.sortedCurrencies[1]
-            let baseCurrency = rates[(self?.sortedCurrencies[0])!] ?? 1.0
-            let targetCurrency = rates[(self?.sortedCurrencies[1])!] ?? 1.0
+            let baseCurrency = rates[(self?.fromDropList.text!)!] ?? 1.0
+            let targetCurrency = rates[(self?.toDropList.text!)!] ?? 1.0
+            
+            self?.theCurrencies.0 = baseCurrency
+            self?.theCurrencies.1 = targetCurrency
             
             self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
         }.disposed(by: disposeBag)
 
         fromDropList.didSelect { selectedText, index, id in
+            self.fromDropList.text = selectedText
+            self.amountTxtField.text = "1"
+            self.theCurrencies.0 = self.rates[selectedText] ?? 1.0
+            self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (selectedText), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.toDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
         }
         
         toDropList.didSelect { selectedText, index, id in
+            self.toDropList.text = selectedText
+            self.amountTxtField.text = "1"
+            self.theCurrencies.1 = self.rates[selectedText] ?? 1.0
+            self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (selectedText), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
         }
         
         
