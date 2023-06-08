@@ -15,13 +15,16 @@ enum EndPoints{
     
     private var baseURL : String { return "http://data.fixer.io/api/latest?access_key=\(key)"}
         
-        case base
-
+    case base
+    //case convertEndPoint(from:String, to:String, amount : Double)
+    
         var fullPath : String{
             var endPoint : String
             switch self{
             case .base:
                 endPoint = baseURL
+//            case .convertEndPoint(from: let from, to: let to, amount: let amount):
+//                endPoint = baseURL + "& from = \(from)& to = JPY"
             }
             return endPoint
         }

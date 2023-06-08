@@ -16,25 +16,63 @@ class ConvertCurrencyViewController: UIViewController {
     @IBOutlet weak var amountTxtField: UITextField!
     @IBOutlet weak var convertedValueTxtField: UITextField!
     
-    let viewModel = CurrencyViewModel()
+    
     private let disposeBag = DisposeBag()
-    var currencies : [String] = []
+    var sortedCurrencies : [String] = []
+    var rates : [String : Double] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let base = EndPoints.base
+        let viewModel = CurrencyViewModel(url: base.fullPath)
+        
+        
         viewModel.currencies.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
             
             guard let rates = currencyResponse.element?.rates else { return }
-            self?.currencies = rates.keys.map {String($0)}
+            self?.rates = rates
             
-            self?.fromDropList.optionArray = self?.currencies ?? []
+            self?.sortedCurrencies = rates.keys.map{String($0)}
+            self?.sortedCurrencies.sort()
+            
+            self?.fromDropList.optionArray = rates.keys.map {String($0)}
+            self?.toDropList.optionArray = rates.keys.map {String($0)}
+            
+            self?.fromDropList.optionArray.sort()
+            self?.toDropList.optionArray.sort()
             self?.fromDropList.reloadInputViews()
-            self?.toDropList.optionArray = self?.currencies ?? []
             self?.toDropList.reloadInputViews()
             
+            self?.fromDropList.text = self?.sortedCurrencies[0]
+            self?.toDropList.text = self?.sortedCurrencies[1]
+            let baseCurrency = rates[(self?.sortedCurrencies[0])!] ?? 1.0
+            let targetCurrency = rates[(self?.sortedCurrencies[1])!] ?? 1.0
+            
+            self?.convertedValueTxtField.text = viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
         }.disposed(by: disposeBag)
+        
+        
+
+        fromDropList.didSelect { selectedText, index, id in
+        }
+        
+        toDropList.didSelect { selectedText, index, id in
+        }
+        
+        
+        fromDropList.listWillAppear {
+            self.fromDropList.selectedIndex = 0
+            self.fromDropList.text = self.sortedCurrencies[0]
+        }
+        
+        toDropList.listWillAppear {
+            self.toDropList.selectedIndex = 1
+            self.toDropList.text = self.sortedCurrencies[1]
+        }
+        
     }
+    
     
     
     @IBAction func swapBtn(_ sender: Any) {

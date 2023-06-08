@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="xxxx" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-Ge-noo">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="xxxx" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-Ge-noo">
                                 <rect key="frame" x="242" y="295" width="124" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -155,6 +155,14 @@
             <point key="canvasLocation" x="918" y="86"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="k0x-Po-rc1">
+            <size key="intrinsicContentSize" width="61" height="34"/>
+        </designable>
+        <designable name="ypE-ZY-sd9">
+            <size key="intrinsicContentSize" width="44" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrows" width="27" height="27"/>
         <systemColor name="systemBackgroundColor">

@@ -3,10 +3,34 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currencyResponse">
+               value = "String(round(gbpAmount * 100)/100)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fromDropList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "amount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #4 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.fromDropList.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,10 +46,13 @@
          contextName = "NetworkService.fetchData(url:):NetworkService.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #1 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fromDropList">
+               value = "toDropList.optionArray">
+            </PersistentString>
+            <PersistentString
+               value = "currencyResponse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
