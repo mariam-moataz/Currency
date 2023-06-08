@@ -46,6 +46,17 @@
          contextName = "NetworkService.fetchData(url:):NetworkService.swift">
       </ContextState>
       <ContextState
+         contextName = "ConvertCurrencyViewController.swapBtn(_:):ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "toDropList.selectedIndex">
+            </PersistentString>
+            <PersistentString
+               value = "fromDropList.selectedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString

@@ -73,24 +73,28 @@ class ConvertCurrencyViewController: UIViewController {
             self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (selectedText), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
         }
         
-        
-        fromDropList.listWillAppear {
-            self.fromDropList.selectedIndex = 0
-            self.fromDropList.text = self.sortedCurrencies[0]
-        }
-        
-        toDropList.listWillAppear {
-            self.toDropList.selectedIndex = 1
-            self.toDropList.text = self.sortedCurrencies[1]
-        }
-        
-        
-        
+        fromDropList.selectedIndex = 0
+        toDropList.selectedIndex = 1
     }
     
     
     
     @IBAction func swapBtn(_ sender: Any) {
+        guard let fromIndex = fromDropList.selectedIndex, let toIndex = toDropList.selectedIndex else {
+               return
+        }
+        
+        let fromValue = fromDropList.text
+        let toValue = toDropList.text
+        fromDropList.selectedIndex = toIndex
+        fromDropList.text = toValue
+        toDropList.selectedIndex = fromIndex
+        toDropList.text = fromValue
+        
+        self.theCurrencies.0 = rates[fromDropList.text!] ?? 1.0
+        self.theCurrencies.1 = rates[toDropList.text!] ?? 1.0
+        
+        self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.fromDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: Double(amountTxtField.text ?? "") ?? 1.0)
     }
     
     
