@@ -18,14 +18,17 @@ class ConvertCurrencyViewController: UIViewController {
     
     
     private let disposeBag = DisposeBag()
+    var viewModel : CurrencyViewModel!
     var sortedCurrencies : [String] = []
     var rates : [String : Double] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        amountTxtField.delegate = self
+
         let base = EndPoints.base
-        let viewModel = CurrencyViewModel(url: base.fullPath)
+        viewModel = CurrencyViewModel(url: base.fullPath)
         
         
         viewModel.currencies.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
@@ -49,10 +52,8 @@ class ConvertCurrencyViewController: UIViewController {
             let baseCurrency = rates[(self?.sortedCurrencies[0])!] ?? 1.0
             let targetCurrency = rates[(self?.sortedCurrencies[1])!] ?? 1.0
             
-            self?.convertedValueTxtField.text = viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
+            self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
         }.disposed(by: disposeBag)
-        
-        
 
         fromDropList.didSelect { selectedText, index, id in
         }
@@ -71,6 +72,8 @@ class ConvertCurrencyViewController: UIViewController {
             self.toDropList.text = self.sortedCurrencies[1]
         }
         
+        
+        
     }
     
     
@@ -84,4 +87,23 @@ class ConvertCurrencyViewController: UIViewController {
     
 }
 
-
+extension ConvertCurrencyViewController : UITextFieldDelegate{
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        if textField == amountTxtField{
+            let baseRate = rates[fromDropList.text!]!
+            let targetRate = rates[toDropList.text!]!
+            
+            if let amount = Double(textField.text!) {
+                convertedValueTxtField.text = viewModel.doCurrencyOperation(baseCurrency: fromDropList.text!, baseCurrencyRate: baseRate, targetCurrency: toDropList.text!, targetCurrencyRate: targetRate, amount: amount)
+            }
+            else {
+                print("Not a valid number: \(textField.text!)")
+            }
+            
+            
+        }
+    }
+    
+}
