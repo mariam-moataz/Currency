@@ -15,8 +15,11 @@ class CurrencyViewModel{
         currencies = NetworkService.shared.fetchData(url: url).observe(on: MainScheduler.instance).catchAndReturn(CurrencyResponse())
     }
     
+    func save(appDel : AppDelegate, baseCur : String, targetCur : String, amount : String, amountConverted : String){
+        CoreDataManager.shared.saveToHistory(appDelegate: appDel, info: ExchangeInfo(baseCurrency: baseCur, targetCurrency: targetCur, amount: amount, convertedAmount: amountConverted))
+    }
+    
     func doCurrencyOperation(baseCurrency: String, baseCurrencyRate: Double ,targetCurrency : String, targetCurrencyRate : Double, amount : Double) -> String?{
-        
         Utilities.utils.convertCurrency(baseCurrency: baseCurrency, baseCurrencyRate: baseCurrencyRate, targetCurrency: targetCurrency, targetCurrencyRate: targetCurrencyRate, amount: amount)
     }
 }

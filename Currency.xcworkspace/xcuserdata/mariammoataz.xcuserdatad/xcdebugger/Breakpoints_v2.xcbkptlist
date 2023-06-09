@@ -3,4 +3,69 @@
    uuid = "48571756-7A35-41D8-AE18-345CF113AE9D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5C083B4-4AD5-4388-AC62-045014273840"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency/Model/Storage/CoreDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "saveHistory(appDelegate:info:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D5C083B4-4AD5-4388-AC62-045014273840 - f878be74a9f3eabd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.CoreDataService.saveHistory(appDelegate: Currency.AppDelegate, info: Currency.ExchangeInfo) -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/Model/Storage/CoreDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "D5C083B4-4AD5-4388-AC62-045014273840 - f878be74a9f3eabd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.CoreDataService.saveHistory(appDelegate: Currency.AppDelegate, info: Currency.ExchangeInfo) -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/Model/Storage/CoreDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "D5C083B4-4AD5-4388-AC62-045014273840 - f878be74a9f3eabd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Currency.CoreDataService.saveHistory(appDelegate: Currency.AppDelegate, info: Currency.ExchangeInfo) -&gt; ()"
+                  moduleName = "Currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariammoataz/Desktop/Currency/Currency/Currency/Model/Storage/CoreDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "185">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

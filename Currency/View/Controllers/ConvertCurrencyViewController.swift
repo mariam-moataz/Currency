@@ -57,6 +57,8 @@ class ConvertCurrencyViewController: UIViewController {
             self?.theCurrencies.1 = targetCurrency
             
             self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
+            
+            self?.viewModel.save(appDel: AppDelegate(), baseCur: (self?.fromDropList.text!)!, targetCur: (self?.toDropList.text!)!, amount: (self?.amountTxtField.text)!, amountConverted: (self?.convertedValueTxtField.text)!)
         }.disposed(by: disposeBag)
 
         fromDropList.didSelect { selectedText, index, id in

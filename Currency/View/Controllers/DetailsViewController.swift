@@ -15,21 +15,53 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        historicalDataTableView.delegate = self
-//        historicalDataTableView.dataSource = self
-//        otherCurrenciesTableView.delegate = self
-//        otherCurrenciesTableView.dataSource = self
+        
+        historicalDataTableView.delegate = self
+        historicalDataTableView.dataSource = self
+        otherCurrenciesTableView.delegate = self
+        otherCurrenciesTableView.dataSource = self
+        
+        let nib1 = UINib(nibName: "TableViewCell", bundle: nil)
+        historicalDataTableView.register(nib1, forCellReuseIdentifier: "cell1")
+        let nib2 = UINib(nibName: "TableViewCell", bundle: nil)
+        otherCurrenciesTableView.register(nib2, forCellReuseIdentifier: "cell2")
     }
 }
 
-//extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//
-//
-//}
+extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section{
+        case 0:
+            return "Day 1"
+        case 1:
+            return "Day 2"
+        default:
+            return "Day 3"
+        }
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch tableView{
+        case historicalDataTableView:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell
+            return cell
+        }
+        
+    }
+
+
+}

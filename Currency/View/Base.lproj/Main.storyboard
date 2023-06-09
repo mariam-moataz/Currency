@@ -89,6 +89,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="detailsBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9T-WN-YmR"/>
+                                    <segue destination="hva-RK-fWp" kind="show" id="2Xa-Ap-bmW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="From" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0x-Po-rc1" customClass="JRDropDown">
@@ -128,7 +129,7 @@
             <objects>
                 <viewController id="hva-RK-fWp" customClass="DetailsViewController" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sGX-fV-d0i">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wLr-OG-TgA">
@@ -145,6 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="qbV-g9-yH1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jil-9s-jxF"/>
                     <connections>
                         <outlet property="historicalDataTableView" destination="wLr-OG-TgA" id="qdy-sp-0NV"/>
                         <outlet property="otherCurrenciesTableView" destination="4oY-Nt-Hgr" id="yfr-89-Ugk"/>
@@ -152,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L5-r6-Unq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="86"/>
+            <point key="canvasLocation" x="982" y="86"/>
         </scene>
     </scenes>
     <designables>

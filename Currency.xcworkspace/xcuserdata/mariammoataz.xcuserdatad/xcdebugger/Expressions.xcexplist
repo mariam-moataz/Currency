@@ -3,26 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "String(round(gbpAmount * 100)/100)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "closure #1 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "fromDropList">
             </PersistentString>
+            <PersistentString
+               value = "self?.fromDropList.text">
+            </PersistentString>
+            <PersistentString
+               value = "self?.toDropList.text">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #2 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "amount">
+               value = "toDropList.optionArray">
+            </PersistentString>
+            <PersistentString
+               value = "currencyResponse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConvertCurrencyViewController.swapBtn(_:):ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "toDropList.selectedIndex">
+            </PersistentString>
+            <PersistentString
+               value = "fromDropList.selectedIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -31,6 +43,14 @@
          <PersistentStrings>
             <PersistentString
                value = " self.fromDropList.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "amount">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,24 +66,18 @@
          contextName = "NetworkService.fetchData(url:):NetworkService.swift">
       </ContextState>
       <ContextState
-         contextName = "ConvertCurrencyViewController.swapBtn(_:):ConvertCurrencyViewController.swift">
+         contextName = "CoreDataService.saveHistory(appDelegate:info:):CoreDataService.swift">
          <PersistentStrings>
             <PersistentString
-               value = "toDropList.selectedIndex">
-            </PersistentString>
-            <PersistentString
-               value = "fromDropList.selectedIndex">
+               value = "Data()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "toDropList.optionArray">
-            </PersistentString>
-            <PersistentString
-               value = "currencyResponse">
+               value = "String(round(gbpAmount * 100)/100)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
