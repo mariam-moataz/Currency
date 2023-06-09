@@ -57,8 +57,9 @@ class ConvertCurrencyViewController: UIViewController {
             self?.theCurrencies.1 = targetCurrency
             
             self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
+            //save to coreData
+            self?.callViewModelTosave()
             
-            self?.viewModel.save(appDel: AppDelegate(), baseCur: (self?.fromDropList.text!)!, targetCur: (self?.toDropList.text!)!, amount: (self?.amountTxtField.text)!, amountConverted: (self?.convertedValueTxtField.text)!)
         }.disposed(by: disposeBag)
 
         fromDropList.didSelect { selectedText, index, id in
@@ -66,6 +67,9 @@ class ConvertCurrencyViewController: UIViewController {
             self.amountTxtField.text = "1"
             self.theCurrencies.0 = self.rates[selectedText] ?? 1.0
             self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (selectedText), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.toDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
+            
+            //save to coreData
+            self.callViewModelTosave()
         }
         
         toDropList.didSelect { selectedText, index, id in
@@ -73,6 +77,9 @@ class ConvertCurrencyViewController: UIViewController {
             self.amountTxtField.text = "1"
             self.theCurrencies.1 = self.rates[selectedText] ?? 1.0
             self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (selectedText), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
+            
+            //save to coreData
+            self.callViewModelTosave()
         }
         
         fromDropList.selectedIndex = 0
@@ -97,6 +104,8 @@ class ConvertCurrencyViewController: UIViewController {
         self.theCurrencies.1 = rates[toDropList.text!] ?? 1.0
         
         self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.fromDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: Double(amountTxtField.text ?? "") ?? 1.0)
+        //save to coreData
+        self.callViewModelTosave()
     }
     
     
@@ -115,6 +124,9 @@ extension ConvertCurrencyViewController : UITextFieldDelegate{
             
             if let amount = Double(textField.text!) {
                 convertedValueTxtField.text = viewModel.doCurrencyOperation(baseCurrency: fromDropList.text!, baseCurrencyRate: baseRate, targetCurrency: toDropList.text!, targetCurrencyRate: targetRate, amount: amount)
+                
+                //save to coreData
+                callViewModelTosave()
             }
             else {
                 print("Not a valid number: \(textField.text!)")
@@ -124,4 +136,12 @@ extension ConvertCurrencyViewController : UITextFieldDelegate{
         }
     }
     
+}
+
+
+extension ConvertCurrencyViewController{
+    
+    func callViewModelTosave(){
+        self.viewModel.save(appDel: AppDelegate(), baseCur: (self.fromDropList.text!), targetCur: (self.toDropList.text!), amount: (self.amountTxtField.text ?? "0.0"), amountConverted: (self.convertedValueTxtField.text ?? "0.0"))
+    }
 }

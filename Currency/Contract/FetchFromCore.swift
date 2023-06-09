@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FetchFromCore{
-    
+    func fetch(appDelegate : AppDelegate) -> [ExchangeInfo]?
 }

@@ -39,27 +39,19 @@ class CoreDataService{
         
     }
     
-//    func fetchHistory(appDelegate : AppDelegate) -> ExchangeInfo{
-//        
-//        var fetchNSManagedObject : [NSManagedObject] = []
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "History")
-//        
-//        //fetch specific recipe for a specific user
-//        let idPredicate = NSPredicate(format: "id = %@", "\(id)")
-//        let emailPredicate = NSPredicate(format: "email = %@", "\(email ?? "")")
-//        
-//        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, emailPredicate])
-//        
-//        fetchRequest.predicate = compoundPredicate
-//        
-//        do{
-//            fetchNSManagedObject = try managedContext.fetch(fetchRequest)
-//        }catch let error as NSError{
-//            print("Error in fetching \(error)")
-//        }
-//        
-//        return RecipeFormatter.shared.formateToRecipeMode(managedObject : fetchNSManagedObject)
-//    }
+    func fetchHistory(appDelegate : AppDelegate) -> [ExchangeInfo]?{
+        
+        var fetchNSManagedObject : [NSManagedObject] = []
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "History")
+                        
+        do{
+            fetchNSManagedObject = try managedContext.fetch(fetchRequest)
+        }catch let error as NSError{
+            print("Error in fetching \(error)")
+        }
+        
+        return InfoFormatter.shared.formateToExchangeInfo(managedObjects : fetchNSManagedObject)
+    }
     
 }

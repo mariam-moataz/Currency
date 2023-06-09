@@ -9,8 +9,10 @@ import Foundation
 
 
 struct ExchangeInfo{
-    var baseCurrency : String
-    var targetCurrency : String
-    var amount : String
-    var convertedAmount : String
+    var baseCurrency = ""
+    var targetCurrency = ""
+    var amount = ""
+    var convertedAmount = ""
+    var date = Date()
+    
 }
