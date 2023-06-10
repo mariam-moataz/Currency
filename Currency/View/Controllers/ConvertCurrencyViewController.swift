@@ -114,7 +114,11 @@ class ConvertCurrencyViewController: UIViewController {
     
     @IBAction func detailsBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(identifier: "details") as! DetailsViewController
-        self    .navigationController?.pushViewController(vc, animated: true)
+        //vc.exchangeInfo = ExchangeInfo(baseCurrency: fromDropList.text ?? "", targetCurrency: toDropList.text ?? "", amount: amountTxtField.text ?? "", convertedAmount: convertedValueTxtField.text ?? "")
+        vc.rates = rates
+        vc.baseCurrency = fromDropList.text
+        vc.amount = amountTxtField.text
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

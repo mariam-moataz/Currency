@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 class CurrencyViewModel{
+    
     let currencies: Observable<CurrencyResponse>?
         
     init(url : String) {
@@ -73,6 +74,25 @@ class CurrencyViewModel{
             historyArray[0]?.append(info[i]) //append in key 0 means today
         }
         return historyArray
+    }
+    
+    let popularCurrencies = PopularCurrencies()
+    
+    func getCurrencies(rates : [String : Double]?, base : String?, amount : String?) -> [ExchangeInfo]?{
+        let popularCurr = popularCurrencies.getCurrencies()
+        var currencies : [ExchangeInfo] = []
+        
+        guard let base = base else {return nil}
+        guard let rates = rates else {return nil}
+        guard let amount = amount else {return nil}
+        guard let doubleValue = Double(amount) else {return nil}
+        
+        for curr in popularCurr {
+            guard let convertedVal = doCurrencyOperation(baseCurrency: base , baseCurrencyRate: rates[base] ?? 1.0, targetCurrency: curr, targetCurrencyRate: rates[curr] ?? 1.0, amount: doubleValue) else {return []}
+            let info = ExchangeInfo(baseCurrency: base, targetCurrency: curr, amount: amount, convertedAmount: convertedVal)
+            currencies.append(info)
+        }
+        return currencies
     }
     
     

@@ -13,8 +13,16 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var historicalDataTableView: UITableView!
     @IBOutlet weak var otherCurrenciesTableView: UITableView!
     
+    //historicalDataTableView
     let viewModel = CurrencyViewModel()
     var info : [Int : [ExchangeInfo]]?
+    
+    //otherCurrenciesTableView
+    //let otherCurrenciesVM = OtherCurrenciesViewModel()
+    var baseCurrency : String?
+    var amount : String?
+    var rates : [String : Double] = [:]
+    var popularCurrencies : [ExchangeInfo]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +39,9 @@ class DetailsViewController: UIViewController {
         
         guard let fetchedInfo = viewModel.fetch(appDel: AppDelegate()) else {return}
         info = fetchedInfo
+        
+        guard let popularCurrencies = viewModel.getCurrencies(rates: rates, base: baseCurrency ?? nil, amount: amount ?? nil) else {return}
+        self.popularCurrencies = popularCurrencies
     }
     
     @objc func back(sender: UIBarButtonItem){
@@ -40,20 +51,31 @@ class DetailsViewController: UIViewController {
 
 extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section{
-        case 0:
-            return info?[0]?.count ?? 0
-        case 1:
-            return info?[1]?.count ?? 0
-        case 2:
-            return info?[2]?.count ?? 0
+        switch tableView{
+        case historicalDataTableView:
+            switch section{
+            case 0:
+                return info?[0]?.count ?? 0
+            case 1:
+                return info?[1]?.count ?? 0
+            case 2:
+                return info?[2]?.count ?? 0
+            default:
+                return info?[3]?.count ?? 0
+            }
         default:
-            return info?[3]?.count ?? 0
+            return popularCurrencies?.count ?? 0
         }
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        switch tableView{
+        case historicalDataTableView:
+            return 4
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,6 +83,9 @@ extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard tableView == historicalDataTableView else{
+            return nil
+        }
         switch section{
         case 0:
             return "Today"
@@ -73,6 +98,7 @@ extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         switch tableView{
             
         case historicalDataTableView:
@@ -112,6 +138,12 @@ extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell
+            cell.fromCurrencyLabel.text = popularCurrencies?[indexPath.row].baseCurrency
+            cell.toCurrencyLabel.text = popularCurrencies?[indexPath.row].targetCurrency
+            cell.fromValueLabel.text = popularCurrencies?[indexPath.row].amount
+            print(popularCurrencies?[indexPath.row].amount ?? "")
+            cell.toValueLabel.text = popularCurrencies?[indexPath.row].convertedAmount
+            cell.dateLabel.text = ""
             return cell
         }
         

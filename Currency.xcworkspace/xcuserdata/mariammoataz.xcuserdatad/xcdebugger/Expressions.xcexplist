@@ -34,13 +34,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "toDropList.optionArray">
+               value = "String(round(gbpAmount * 100)/100)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.viewDidLoad():DetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rates">
             </PersistentString>
             <PersistentString
-               value = "currencyResponse">
+               value = "baseCurrency">
+            </PersistentString>
+            <PersistentString
+               value = "amount">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -91,10 +102,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
+         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "String(round(gbpAmount * 100)/100)">
+               value = "toDropList.optionArray">
+            </PersistentString>
+            <PersistentString
+               value = "currencyResponse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
