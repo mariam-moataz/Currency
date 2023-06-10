@@ -62,6 +62,9 @@ class ConvertCurrencyViewController: UIViewController {
             
         }.disposed(by: disposeBag)
 
+        fromDropList.dropDownDefaultStyling()
+        toDropList.dropDownDefaultStyling()
+        
         fromDropList.didSelect { selectedText, index, id in
             self.fromDropList.text = selectedText
             self.amountTxtField.text = "1"

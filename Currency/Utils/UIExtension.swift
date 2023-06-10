@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import iOSDropDown
 
 @IBDesignable extension UIView {
     @IBInspectable var borderColor: UIColor? {
@@ -39,3 +40,13 @@ import UIKit
     }
 }
 
+extension DropDown{
+    func dropDownDefaultStyling(){
+        self.selectedRowColor = UIColor(named: "color1")!
+        self.rowBackgroundColor = UIColor.white
+        self.arrowSize = 15
+        self.arrowColor = UIColor(named: "color1")!
+        self.textColor = UIColor.black
+        self.checkMarkEnabled = false
+    }
+}

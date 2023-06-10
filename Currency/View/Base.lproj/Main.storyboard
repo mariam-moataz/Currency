@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,16 +27,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-bS-51c">
-                                                <rect key="frame" x="171" y="280" width="51" height="41"/>
+                                                <rect key="frame" x="173" y="310" width="47" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrows"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arr1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="2"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,35 +47,58 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="To" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-ZY-sd9" customClass="JRDropDown">
-                                                <rect key="frame" x="265" y="280" width="118" height="34"/>
+                                                <rect key="frame" x="265" y="310" width="118" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="listHeight">
                                                         <real key="value" value="120"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="color2"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-Za-HeM">
-                                                <rect key="frame" x="10" y="334" width="118" height="34"/>
+                                                <rect key="frame" x="10" y="364" width="118" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="color2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="xxxx" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-Ge-noo">
-                                                <rect key="frame" x="265" y="334" width="118" height="34"/>
+                                                <rect key="frame" x="265" y="364" width="118" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="color2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcF-8f-nuB">
-                                                <rect key="frame" x="118" y="388" width="157" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcF-8f-nuB">
+                                                <rect key="frame" x="118" y="438" width="157" height="40"/>
                                                 <color key="backgroundColor" red="0.85098046059999999" green="0.85098046059999999" blue="0.85098046059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Details">
@@ -82,10 +106,10 @@
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="2"/>
+                                                        <real key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" red="0.85098046059999999" green="0.85098046059999999" blue="0.85098046059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,19 +120,22 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="From" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0x-Po-rc1" customClass="JRDropDown">
-                                                <rect key="frame" x="10" y="280" width="118" height="34"/>
-                                                <color key="textColor" red="0.85098046059999999" green="0.85098046059999999" blue="0.85098046059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="10" y="310" width="118" height="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="0.0"/>
+                                                        <real key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="listHeight">
                                                         <real key="value" value="120"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="color2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -130,8 +157,9 @@
                                             <constraint firstItem="Bee-Za-HeM" firstAttribute="height" secondItem="iLo-EK-uDV" secondAttribute="height" multiplier="0.136" id="NAO-6Y-wDZ"/>
                                             <constraint firstItem="ypE-ZY-sd9" firstAttribute="top" secondItem="k0x-Po-rc1" secondAttribute="top" id="NXc-x0-uqj"/>
                                             <constraint firstItem="iLo-EK-uDV" firstAttribute="width" secondItem="7Wb-Uo-a50" secondAttribute="width" id="OaK-DN-3FC"/>
-                                            <constraint firstItem="k0x-Po-rc1" firstAttribute="top" secondItem="iLo-EK-uDV" secondAttribute="bottom" constant="30" id="Ray-rc-DZ7"/>
+                                            <constraint firstItem="k0x-Po-rc1" firstAttribute="top" secondItem="iLo-EK-uDV" secondAttribute="bottom" constant="60" id="Ray-rc-DZ7"/>
                                             <constraint firstItem="qhW-bS-51c" firstAttribute="centerY" secondItem="7Wb-Uo-a50" secondAttribute="centerY" id="SNy-mK-OG2"/>
+                                            <constraint firstItem="qhW-bS-51c" firstAttribute="width" secondItem="iLo-EK-uDV" secondAttribute="width" multiplier="0.12" id="XOX-g2-Tf3"/>
                                             <constraint firstItem="k0x-Po-rc1" firstAttribute="height" secondItem="iLo-EK-uDV" secondAttribute="height" multiplier="0.136" id="XqD-TA-PsD"/>
                                             <constraint firstItem="d9g-Ge-noo" firstAttribute="top" secondItem="k0x-Po-rc1" secondAttribute="bottom" constant="20" id="baj-NJ-vjy"/>
                                             <constraint firstItem="rcF-8f-nuB" firstAttribute="height" secondItem="7Wb-Uo-a50" secondAttribute="height" multiplier="0.04" id="bpQ-ea-WNs"/>
@@ -146,7 +174,7 @@
                                             <constraint firstItem="rcF-8f-nuB" firstAttribute="width" secondItem="7Wb-Uo-a50" secondAttribute="width" multiplier="0.4" id="rBT-Su-9ji"/>
                                             <constraint firstItem="Bee-Za-HeM" firstAttribute="width" secondItem="iLo-EK-uDV" secondAttribute="width" multiplier="0.3" id="rar-bf-cXc"/>
                                             <constraint firstItem="d9g-Ge-noo" firstAttribute="height" secondItem="Bee-Za-HeM" secondAttribute="height" id="rv6-vG-2BJ"/>
-                                            <constraint firstItem="rcF-8f-nuB" firstAttribute="top" secondItem="Bee-Za-HeM" secondAttribute="bottom" constant="20" id="tQl-bc-LOc"/>
+                                            <constraint firstItem="rcF-8f-nuB" firstAttribute="top" secondItem="Bee-Za-HeM" secondAttribute="bottom" constant="40" id="tQl-bc-LOc"/>
                                             <constraint firstItem="ypE-ZY-sd9" firstAttribute="width" secondItem="k0x-Po-rc1" secondAttribute="width" id="tfL-RS-kiH"/>
                                             <constraint firstAttribute="height" constant="1000" id="vur-f2-FCS"/>
                                             <constraint firstItem="iLo-EK-uDV" firstAttribute="height" secondItem="7Wb-Uo-a50" secondAttribute="height" multiplier="0.25" id="yA0-ez-xXL"/>
@@ -346,7 +374,10 @@
     </designables>
     <resources>
         <image name="CashPayment-bro" width="2000" height="2000"/>
-        <image name="arrows" width="27" height="27"/>
+        <image name="arr1" width="36.333332061767578" height="27"/>
+        <namedColor name="color2">
+            <color red="0.4588235021" green="0.4588235021" blue="0.4588235021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
