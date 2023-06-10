@@ -110,6 +110,8 @@ class ConvertCurrencyViewController: UIViewController {
     
     
     @IBAction func detailsBtn(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "details") as! DetailsViewController
+        self    .navigationController?.pushViewController(vc, animated: true)
     }
     
 }

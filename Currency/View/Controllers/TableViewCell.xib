@@ -51,10 +51,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-4T-r7P">
+                        <rect key="frame" x="250" y="135" width="143" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="G5X-4T-r7P" id="WKs-0g-8KP"/>
                 <outlet property="fromCurrencyLabel" destination="maM-LN-UFv" id="BW8-1X-Pd3"/>
                 <outlet property="fromValueLabel" destination="cvb-1f-siK" id="3tY-BX-uCu"/>
                 <outlet property="toCurrencyLabel" destination="xSR-Vj-PJO" id="nlO-2H-Vc4"/>

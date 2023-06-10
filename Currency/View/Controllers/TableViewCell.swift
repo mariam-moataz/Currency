@@ -13,6 +13,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var toCurrencyLabel: UILabel!
     @IBOutlet weak var fromValueLabel: UILabel!
     @IBOutlet weak var toValueLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
