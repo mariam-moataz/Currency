@@ -32,7 +32,7 @@ class ConvertCurrencyViewController: UIViewController {
         viewModel = CurrencyViewModel(url: base.fullPath)
         
         
-        viewModel.currencies.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
+        viewModel.currencies?.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
             
             guard let rates = currencyResponse.element?.rates else { return }
             self?.rates = rates

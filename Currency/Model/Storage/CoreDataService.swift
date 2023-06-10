@@ -19,7 +19,10 @@ class CoreDataService{
         let currencyDetails = NSManagedObject(entity: entity!, insertInto: managedContext)
         
         print(Date.now)
+        let calendar = Calendar.current
+        let today = Date.now
         
+        //let threeDaysAgo = calendar.date(byAdding: .day, value: -2, to: today)!
         currencyDetails.setValue(Date.now, forKey: "date")
         currencyDetails.setValue(info.baseCurrency, forKey: "baseCur")
         currencyDetails.setValue(info.targetCurrency, forKey: "targetCur")

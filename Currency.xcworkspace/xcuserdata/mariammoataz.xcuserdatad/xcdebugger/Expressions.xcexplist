@@ -17,6 +17,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CurrencyViewModel.fetch(appDel:):CurrencyViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "oneDayAgo">
+            </PersistentString>
+            <PersistentString
+               value = "oneDayComp">
+            </PersistentString>
+            <PersistentString
+               value = "twoDaysComp.day">
+            </PersistentString>
+            <PersistentString
+               value = "component1.day">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString

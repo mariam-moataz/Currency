@@ -13,6 +13,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var historicalDataTableView: UITableView!
     @IBOutlet weak var otherCurrenciesTableView: UITableView!
     
+    let viewModel = CurrencyViewModel()
+    //var info : [ExchangeInfo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +28,9 @@ class DetailsViewController: UIViewController {
         historicalDataTableView.register(nib1, forCellReuseIdentifier: "cell1")
         let nib2 = UINib(nibName: "TableViewCell", bundle: nil)
         otherCurrenciesTableView.register(nib2, forCellReuseIdentifier: "cell2")
+        
+        guard let info = viewModel.fetch(appDel: AppDelegate()) else {return}
+        //self.info = info
     }
 }
 

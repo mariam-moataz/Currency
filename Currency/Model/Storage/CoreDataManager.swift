@@ -17,7 +17,7 @@ class CoreDataManager : SaveToCore, FetchFromCore{
         CoreDataService.shared.saveHistory(appDelegate: appDelegate, info: info)
     }
     
-    func fetch(appDelegate : AppDelegate) -> [ExchangeInfo]?{
+    func fetchHistory(appDelegate : AppDelegate) -> [ExchangeInfo]?{
         CoreDataService.shared.fetchHistory(appDelegate: appDelegate)
     }
 }
