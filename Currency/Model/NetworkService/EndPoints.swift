@@ -10,7 +10,6 @@ import Foundation
 enum EndPoints{
     
     private var key : String {
-        //return "48077b55b55d82ccb7c21382a249b725"
         return "974fbb215f382acec6384896ac2a3a2a"
         
     }

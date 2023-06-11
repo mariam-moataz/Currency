@@ -8,8 +8,6 @@
 import Foundation
 
 struct PopularCurrencies{
-    //USD,JPY,CNY,GBP,AUD,CAD,CHF,NZD,HKD,SGD
-    
     func getCurrencies() -> [String]{
         let currenciesArray = ["USD","JPY","CNY","GBP","AUD","CAD","CHF","NZD","HKD","SGD"]
         return currenciesArray

@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ConvertCurrencyViewController.viewWillAppear(_:):ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "path?.status">
+            </PersistentString>
+            <PersistentString
+               value = "networkFlag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString

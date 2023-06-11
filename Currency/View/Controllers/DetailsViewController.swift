@@ -18,7 +18,6 @@ class DetailsViewController: UIViewController {
     var info : [Int : [ExchangeInfo]]?
     
     //otherCurrenciesTableView
-    //let otherCurrenciesVM = OtherCurrenciesViewModel()
     var baseCurrency : String?
     var amount : String?
     var rates : [String : Double] = [:]
@@ -104,7 +103,7 @@ extension DetailsViewController : UITableViewDelegate,UITableViewDataSource{
         case historicalDataTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
             
-            let converterViewModel = ViewModelDateFormatter()
+            let converterViewModel = ViewModelFormatter()
             
             switch indexPath.section {
             case 0:

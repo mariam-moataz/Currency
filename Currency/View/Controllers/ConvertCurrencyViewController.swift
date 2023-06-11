@@ -16,7 +16,8 @@ class ConvertCurrencyViewController: UIViewController {
     @IBOutlet weak var toDropList: DropDown!
     @IBOutlet weak var amountTxtField: UITextField!
     @IBOutlet weak var convertedValueTxtField: UITextField!
-    
+    @IBOutlet weak var swapOutlet: UIButton!
+    @IBOutlet weak var detailsOutlet: UIButton!
     
     private let disposeBag = DisposeBag()
     var viewModel : CurrencyViewModel!
@@ -28,50 +29,60 @@ class ConvertCurrencyViewController: UIViewController {
         super.viewDidLoad()
         
         amountTxtField.delegate = self
-
+        amountTxtField.keyboardType = .numberPad
         let base = EndPoints.base
         viewModel = CurrencyViewModel(url: base.fullPath)
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let monitor = NWPathMonitor()
         monitor.start(queue: .global())
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied{
-                self.loadData()
+                DispatchQueue.main.async {
+                    self.loadData()
+                    self.fromDropList.dropDownDefaultStyling()
+                    self.toDropList.dropDownDefaultStyling()
+                    self.fromDropList.didSelect { selectedText, index, id in
+                        self.fromDropList.text = selectedText
+                        self.amountTxtField.text = "1"
+                        self.theCurrencies.0 = self.rates[selectedText] ?? 1.0
+                        self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (selectedText), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.toDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
+                        
+                        //save to coreData
+                        self.callViewModelTosave()
+                    }
+                    
+                    self.toDropList.didSelect { selectedText, index, id in
+                        self.toDropList.text = selectedText
+                        self.amountTxtField.text = "1"
+                        self.theCurrencies.1 = self.rates[selectedText] ?? 1.0
+                        self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (selectedText), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
+                        
+                        //save to coreData
+                        self.callViewModelTosave()
+                    }
+                    
+                    self.fromDropList.selectedIndex = 0
+                    self.toDropList.selectedIndex = 1
+                }
             }
             else{
-                
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Alert", message: "Check intertnet connection then restart the app", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                        self.amountTxtField.isEnabled = false
+                        self.convertedValueTxtField.isEnabled = false
+                        self.fromDropList.isEnabled = false
+                        self.toDropList.isEnabled = false
+                        self.swapOutlet.isEnabled = false
+                        self.detailsOutlet.isEnabled = false
+                    }))
+                    self.present(alert, animated: true)
+                }
             }
         }
-        
-
-        fromDropList.dropDownDefaultStyling()
-        toDropList.dropDownDefaultStyling()
-        
-        fromDropList.didSelect { selectedText, index, id in
-            self.fromDropList.text = selectedText
-            self.amountTxtField.text = "1"
-            self.theCurrencies.0 = self.rates[selectedText] ?? 1.0
-            self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (selectedText), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (self.toDropList.text!), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
-            
-            //save to coreData
-            self.callViewModelTosave()
-        }
-        
-        toDropList.didSelect { selectedText, index, id in
-            self.toDropList.text = selectedText
-            self.amountTxtField.text = "1"
-            self.theCurrencies.1 = self.rates[selectedText] ?? 1.0
-            self.convertedValueTxtField.text = self.viewModel.doCurrencyOperation(baseCurrency: (self.fromDropList.text!), baseCurrencyRate: self.theCurrencies.0, targetCurrency: (selectedText), targetCurrencyRate: self.theCurrencies.1, amount: 1.0)
-            
-            //save to coreData
-            self.callViewModelTosave()
-        }
-        
-        fromDropList.selectedIndex = 0
-        toDropList.selectedIndex = 1
     }
-    
     
     
     @IBAction func swapBtn(_ sender: Any) {
@@ -97,7 +108,6 @@ class ConvertCurrencyViewController: UIViewController {
     
     @IBAction func detailsBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(identifier: "details") as! DetailsViewController
-        //vc.exchangeInfo = ExchangeInfo(baseCurrency: fromDropList.text ?? "", targetCurrency: toDropList.text ?? "", amount: amountTxtField.text ?? "", convertedAmount: convertedValueTxtField.text ?? "")
         vc.rates = rates
         vc.baseCurrency = fromDropList.text
         vc.amount = amountTxtField.text
@@ -140,7 +150,18 @@ class ConvertCurrencyViewController: UIViewController {
 extension ConvertCurrencyViewController : UITextFieldDelegate{
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
+
+        let vm = ViewModelFormatter()
+        if let input = textField.text{
+            if !vm.isNumeber(input) {
+                let alert = UIAlertController(title: "Alert", message: "Please enter a valid number", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    textField.text = ""
+                    self.convertedValueTxtField.text = ""
+                }))
+                self.present(alert, animated: true)
+                }
+        }
         if textField == amountTxtField{
             let baseRate = rates[fromDropList.text!]!
             let targetRate = rates[toDropList.text!]!
@@ -165,6 +186,7 @@ extension ConvertCurrencyViewController : UITextFieldDelegate{
 extension ConvertCurrencyViewController{
     
     func callViewModelTosave(){
+        guard fromDropList.text != "", toDropList.text != "" else {return}
         self.viewModel.save(appDel: AppDelegate(), baseCur: (self.fromDropList.text!), targetCur: (self.toDropList.text!), amount: (self.amountTxtField.text ?? "0.0"), amountConverted: (self.convertedValueTxtField.text ?? "0.0"))
     }
 }

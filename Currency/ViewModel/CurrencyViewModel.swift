@@ -76,10 +76,8 @@ class CurrencyViewModel{
         return historyArray
     }
     
-    let popularCurrencies = PopularCurrencies()
-    
     func getCurrencies(rates : [String : Double]?, base : String?, amount : String?) -> [ExchangeInfo]?{
-        let popularCurr = popularCurrencies.getCurrencies()
+        let popularCurr = PopularCurrencies().getCurrencies()
         var currencies : [ExchangeInfo] = []
         
         guard let base = base else {return nil}
