@@ -13,7 +13,7 @@ class NetworkService : NetworkServiceProtocol{
     static var shared = NetworkService()
     private init(){}
     
-    func fetchData(url : String?) -> Observable<CurrencyResponse>{
+    func fetchData(url : String?) -> Observable<CurrencyResponse>?{
         guard let url = URL(string: url!) else {
             return Observable.error(NSError(domain: "Invalid URL", code: -1))
         }

@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol NetworkServiceProtocol{
-    func fetchData(url : String?) -> Observable<CurrencyResponse>
+    func fetchData(url : String?) -> Observable<CurrencyResponse>?
 }

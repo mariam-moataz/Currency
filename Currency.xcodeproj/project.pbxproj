@@ -14,6 +14,8 @@
 		C9152A192A2E949200711ADB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152A182A2E949200711ADB /* DetailsViewController.swift */; };
 		C931C0A52A33FF7D003FC426 /* ViewModelDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931C0A42A33FF7D003FC426 /* ViewModelDateFormatter.swift */; };
 		C9372A432A2EB23D00DCBF5A /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9372A422A2EB23D00DCBF5A /* CurrencyResponse.swift */; };
+		C93DB9252A3558F3004B8AFA /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93DB91E2A3558D5004B8AFA /* NetworkServiceTests.swift */; };
+		C93DB92B2A35622A004B8AFA /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93DB92A2A35622A004B8AFA /* CoreDataTests.swift */; };
 		C93E24F82A3001FC002EC0B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24F72A3001FC002EC0B3 /* NetworkService.swift */; };
 		C93E24FA2A30021D002EC0B3 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24F92A30021D002EC0B3 /* NetworkServiceProtocol.swift */; };
 		C93E24FC2A300278002EC0B3 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E24FB2A300278002EC0B3 /* EndPoints.swift */; };
@@ -43,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C93DB9202A3558D5004B8AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B0347E2A2E5992008DCE34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B034852A2E5993008DCE34;
+			remoteInfo = Currency;
+		};
 		C9B034A02A2E5994008DCE34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9B0347E2A2E5992008DCE34 /* Project object */;
@@ -69,6 +78,9 @@
 		C9152A182A2E949200711ADB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C931C0A42A33FF7D003FC426 /* ViewModelDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDateFormatter.swift; sourceTree = "<group>"; };
 		C9372A422A2EB23D00DCBF5A /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
+		C93DB91C2A3558D5004B8AFA /* NetworkServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93DB91E2A3558D5004B8AFA /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		C93DB92A2A35622A004B8AFA /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		C93E24F72A3001FC002EC0B3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C93E24F92A30021D002EC0B3 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		C93E24FB2A300278002EC0B3 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -106,6 +118,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C93DB9192A3558D5004B8AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9B034832A2E5993008DCE34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +212,7 @@
 				C9B034862A2E5993008DCE34 /* Currency.app */,
 				C9B0349F2A2E5994008DCE34 /* CurrencyTests.xctest */,
 				C9B034A92A2E5994008DCE34 /* CurrencyUITests.xctest */,
+				C93DB91C2A3558D5004B8AFA /* NetworkServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +236,8 @@
 		C9B034A22A2E5994008DCE34 /* CurrencyTests */ = {
 			isa = PBXGroup;
 			children = (
+				C93DB92A2A35622A004B8AFA /* CoreDataTests.swift */,
+				C93DB91E2A3558D5004B8AFA /* NetworkServiceTests.swift */,
 				C9B034A32A2E5994008DCE34 /* CurrencyTests.swift */,
 			);
 			path = CurrencyTests;
@@ -313,6 +335,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C93DB91B2A3558D5004B8AFA /* NetworkServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C93DB9242A3558D5004B8AFA /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */;
+			buildPhases = (
+				C93DB9182A3558D5004B8AFA /* Sources */,
+				C93DB9192A3558D5004B8AFA /* Frameworks */,
+				C93DB91A2A3558D5004B8AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C93DB9212A3558D5004B8AFA /* PBXTargetDependency */,
+			);
+			name = NetworkServiceTests;
+			productName = NetworkServiceTests;
+			productReference = C93DB91C2A3558D5004B8AFA /* NetworkServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C9B034852A2E5993008DCE34 /* Currency */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9B034B32A2E5994008DCE34 /* Build configuration list for PBXNativeTarget "Currency" */;
@@ -381,6 +421,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					C93DB91B2A3558D5004B8AFA = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = C9B034852A2E5993008DCE34;
+					};
 					C9B034852A2E5993008DCE34 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -410,11 +454,19 @@
 				C9B034852A2E5993008DCE34 /* Currency */,
 				C9B0349E2A2E5994008DCE34 /* CurrencyTests */,
 				C9B034A82A2E5994008DCE34 /* CurrencyUITests */,
+				C93DB91B2A3558D5004B8AFA /* NetworkServiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C93DB91A2A3558D5004B8AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9B034842A2E5993008DCE34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,6 +598,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C93DB9182A3558D5004B8AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9B034822A2E5993008DCE34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,6 +639,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93DB92B2A35622A004B8AFA /* CoreDataTests.swift in Sources */,
+				C93DB9252A3558F3004B8AFA /* NetworkServiceTests.swift in Sources */,
 				C9B034A42A2E5994008DCE34 /* CurrencyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +657,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C93DB9212A3558D5004B8AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B034852A2E5993008DCE34 /* Currency */;
+			targetProxy = C93DB9202A3558D5004B8AFA /* PBXContainerItemProxy */;
+		};
 		C9B034A12A2E5994008DCE34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9B034852A2E5993008DCE34 /* Currency */;
@@ -628,6 +694,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C93DB9222A3558D5004B8AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 64BDJTHJNX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Currency.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Currency";
+			};
+			name = Debug;
+		};
+		C93DB9232A3558D5004B8AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 64BDJTHJNX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Currency.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Currency";
+			};
+			name = Release;
+		};
 		C9B034B12A2E5994008DCE34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -883,6 +993,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C93DB9242A3558D5004B8AFA /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93DB9222A3558D5004B8AFA /* Debug */,
+				C93DB9232A3558D5004B8AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9B034812A2E5992008DCE34 /* Build configuration list for PBXProject "Currency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

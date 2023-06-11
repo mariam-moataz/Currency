@@ -13,7 +13,7 @@ class CurrencyViewModel{
     let currencies: Observable<CurrencyResponse>?
         
     init(url : String) {
-        currencies = NetworkService.shared.fetchData(url: url).observe(on: MainScheduler.instance).catchAndReturn(CurrencyResponse())
+        currencies = NetworkService.shared.fetchData(url: url)?.observe(on: MainScheduler.instance).catchAndReturn(CurrencyResponse())
     }
     
     init(){
