@@ -8,6 +8,7 @@
 import UIKit
 import iOSDropDown
 import RxSwift
+import Network
 
 class ConvertCurrencyViewController: UIViewController {
 
@@ -32,35 +33,17 @@ class ConvertCurrencyViewController: UIViewController {
         viewModel = CurrencyViewModel(url: base.fullPath)
         
         
-        viewModel.currencies?.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
-            
-            guard let rates = currencyResponse.element?.rates else { return }
-            self?.rates = rates
-            
-            self?.sortedCurrencies = rates.keys.map{String($0)}
-            self?.sortedCurrencies.sort()
-            
-            self?.fromDropList.optionArray = rates.keys.map {String($0)}
-            self?.toDropList.optionArray = rates.keys.map {String($0)}
-            
-            self?.fromDropList.optionArray.sort()
-            self?.toDropList.optionArray.sort()
-            self?.fromDropList.reloadInputViews()
-            self?.toDropList.reloadInputViews()
-            
-            self?.fromDropList.text = self?.sortedCurrencies[0]
-            self?.toDropList.text = self?.sortedCurrencies[1]
-            let baseCurrency = rates[(self?.fromDropList.text!)!] ?? 1.0
-            let targetCurrency = rates[(self?.toDropList.text!)!] ?? 1.0
-            
-            self?.theCurrencies.0 = baseCurrency
-            self?.theCurrencies.1 = targetCurrency
-            
-            self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
-            //save to coreData
-            self?.callViewModelTosave()
-            
-        }.disposed(by: disposeBag)
+        let monitor = NWPathMonitor()
+        monitor.start(queue: .global())
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied{
+                self.loadData()
+            }
+            else{
+                
+            }
+        }
+        
 
         fromDropList.dropDownDefaultStyling()
         toDropList.dropDownDefaultStyling()
@@ -121,6 +104,37 @@ class ConvertCurrencyViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func loadData(){
+        viewModel.currencies?.observe(on: MainScheduler.instance).subscribe { [weak self] currencyResponse in
+            
+            guard let rates = currencyResponse.element?.rates else { return }
+            self?.rates = rates
+            
+            self?.sortedCurrencies = rates.keys.map{String($0)}
+            self?.sortedCurrencies.sort()
+            
+            self?.fromDropList.optionArray = rates.keys.map {String($0)}
+            self?.toDropList.optionArray = rates.keys.map {String($0)}
+            
+            self?.fromDropList.optionArray.sort()
+            self?.toDropList.optionArray.sort()
+            self?.fromDropList.reloadInputViews()
+            self?.toDropList.reloadInputViews()
+            
+            self?.fromDropList.text = self?.sortedCurrencies[0]
+            self?.toDropList.text = self?.sortedCurrencies[1]
+            let baseCurrency = rates[(self?.fromDropList.text!)!] ?? 1.0
+            let targetCurrency = rates[(self?.toDropList.text!)!] ?? 1.0
+            
+            self?.theCurrencies.0 = baseCurrency
+            self?.theCurrencies.1 = targetCurrency
+            
+            self?.convertedValueTxtField.text = self?.viewModel.doCurrencyOperation(baseCurrency: (self?.fromDropList.text!)!, baseCurrencyRate: baseCurrency, targetCurrency: (self?.toDropList.text!)!, targetCurrencyRate: targetCurrency, amount: 1.0)
+            //save to coreData
+            self?.callViewModelTosave()
+            
+        }.disposed(by: disposeBag)
+    }
 }
 
 extension ConvertCurrencyViewController : UITextFieldDelegate{

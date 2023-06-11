@@ -17,45 +17,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CurrencyViewModel.fetch(appDel:):CurrencyViewModel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "oneDayAgo">
-            </PersistentString>
-            <PersistentString
-               value = "oneDayComp">
-            </PersistentString>
-            <PersistentString
-               value = "twoDaysComp.day">
-            </PersistentString>
-            <PersistentString
-               value = "component1.day">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "String(round(gbpAmount * 100)/100)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DetailsViewController.viewDidLoad():DetailsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "rates">
-            </PersistentString>
-            <PersistentString
-               value = "baseCurrency">
-            </PersistentString>
-            <PersistentString
-               value = "amount">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "ConvertCurrencyViewController.swapBtn(_:):ConvertCurrencyViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -63,6 +24,17 @@
             </PersistentString>
             <PersistentString
                value = "fromDropList.selectedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "toDropList.optionArray">
+            </PersistentString>
+            <PersistentString
+               value = "currencyResponse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -102,13 +74,52 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ConvertCurrencyViewController.viewDidLoad():ConvertCurrencyViewController.swift">
+         contextName = "DetailsViewController.viewDidLoad():DetailsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "toDropList.optionArray">
+               value = "rates">
             </PersistentString>
             <PersistentString
-               value = "currencyResponse">
+               value = "baseCurrency">
+            </PersistentString>
+            <PersistentString
+               value = "amount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConvertCurrencyViewController.callViewModelTosave():ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.fromDropList.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.toDropList.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CurrencyViewModel.fetch(appDel:):CurrencyViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "oneDayAgo">
+            </PersistentString>
+            <PersistentString
+               value = "oneDayComp">
+            </PersistentString>
+            <PersistentString
+               value = "twoDaysComp.day">
+            </PersistentString>
+            <PersistentString
+               value = "component1.day">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConvertCurrencyViewController.convertCurrency(baseCurrency:targetCurrency:amount:):ConvertCurrencyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(round(gbpAmount * 100)/100)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
